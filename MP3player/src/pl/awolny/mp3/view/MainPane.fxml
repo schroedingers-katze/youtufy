@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="432.0" prefWidth="722.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="280.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <AnchorPane prefHeight="62.0" prefWidth="722.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="20.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="90.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Otwórz plik" />
+                  </items>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Otwórz folder" />
+                  </items>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Zamknij" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children></AnchorPane>
    </top>
    <center>
-      <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="725.0" BorderPane.alignment="CENTER" />
+      <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="230.0" prefWidth="656.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView maxHeight="1.7976931348623157E308" prefHeight="230.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
    </center>
    <bottom>
-      <HBox prefHeight="54.0" prefWidth="722.0" BorderPane.alignment="CENTER" />
+      <HBox prefHeight="27.0" prefWidth="722.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="Button" />
+            <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+            <ToggleButton maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="ToggleButton" />
+            <Slider />
+            <Slider />
+         </children></HBox>
    </bottom>
 </BorderPane>
