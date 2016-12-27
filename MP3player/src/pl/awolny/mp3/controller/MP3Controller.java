@@ -26,7 +26,9 @@ public class MP3Controller implements Initializable{
     private MenuItem fileMenuItem;
     @FXML
     private MenuItem dirMenuItem;
-    @FXML
+
+
+	@FXML
     private MenuItem closeMenuItem;
     @FXML
     private MenuItem aboutMenuItem;
@@ -43,10 +45,95 @@ public class MP3Controller implements Initializable{
     @FXML
     private ToggleButton playButton;
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-
-
+    public Button getNextButton() {
+		return nextButton;
 	}
 
+	public void setNextButton(Button nextButton) {
+		this.nextButton = nextButton;
+	}
+
+	public Slider getVolumeSlider() {
+		return volumeSlider;
+	}
+
+	public void setVolumeSlider(Slider volumeSlider) {
+		this.volumeSlider = volumeSlider;
+	}
+
+	public Slider getSongSlider() {
+		return songSlider;
+	}
+
+	public void setSongSlider(Slider songSlider) {
+		this.songSlider = songSlider;
+	}
+
+	public MenuItem getFileMenuItem() {
+		return fileMenuItem;
+	}
+
+	public void setFileMenuItem(MenuItem fileMenuItem) {
+		this.fileMenuItem = fileMenuItem;
+	}
+
+	public MenuItem getDirMenuItem() {
+		return dirMenuItem;
+	}
+
+	public void setDirMenuItem(MenuItem dirMenuItem) {
+		this.dirMenuItem = dirMenuItem;
+	}
+
+	public MenuItem getCloseMenuItem() {
+		return closeMenuItem;
+	}
+
+	public void setCloseMenuItem(MenuItem closeMenuItem) {
+		this.closeMenuItem = closeMenuItem;
+	}
+
+	public MenuItem getAboutMenuItem() {
+		return aboutMenuItem;
+	}
+
+	public void setAboutMenuItem(MenuItem aboutMenuItem) {
+		this.aboutMenuItem = aboutMenuItem;
+	}
+
+	public TableView<?> getContentTable() {
+		return contentTable;
+	}
+
+	public void setContentTable(TableView<?> contentTable) {
+		this.contentTable = contentTable;
+	}
+
+	public MenuBar getMenu() {
+		return menu;
+	}
+
+	public void setMenu(MenuBar menu) {
+		this.menu = menu;
+	}
+
+	public Button getPrevButton() {
+		return prevButton;
+	}
+
+	public void setPrevButton(Button prevButton) {
+		this.prevButton = prevButton;
+	}
+
+	public ToggleButton getPlayButton() {
+		return playButton;
+	}
+
+	public void setPlayButton(ToggleButton playButton) {
+		this.playButton = playButton;
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+	}
 }
