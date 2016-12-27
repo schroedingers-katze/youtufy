@@ -9,22 +9,22 @@
    <top>
       <AnchorPane prefHeight="20.0" prefWidth="725.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuBar prefHeight="25.0" prefWidth="90.0">
+            <MenuBar fx:id="menu" prefHeight="25.0" prefWidth="90.0">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Otwórz plik" />
+                    <MenuItem fx:id="fileMenuItem" mnemonicParsing="false" text="Otwórz plik" />
                   </items>
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Otwórz folder" />
+                    <MenuItem fx:id="dirMenuItem" mnemonicParsing="false" text="Otwórz folder" />
                   </items>
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Zamknij" />
+                    <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Zamknij" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" />
                   </items>
                 </Menu>
               </menus>
@@ -34,7 +34,7 @@
    <center>
       <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="230.0" prefWidth="656.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView maxHeight="1.7976931348623157E308" prefHeight="230.0" prefWidth="200.0">
+            <TableView fx:id="contentTable" maxHeight="1.7976931348623157E308" prefHeight="230.0" prefWidth="200.0">
               <columns>
                 <TableColumn prefWidth="75.0" text="C1" />
                 <TableColumn prefWidth="75.0" text="C2" />
@@ -45,11 +45,11 @@
    <bottom>
       <HBox prefHeight="27.0" prefWidth="722.0" BorderPane.alignment="CENTER">
          <children>
-            <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="Button" />
-            <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
-            <ToggleButton maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="ToggleButton" />
-            <Slider />
-            <Slider />
+            <Button fx:id="prevButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="Button" />
+            <Button fx:id="nextButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+            <ToggleButton fx:id="playButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="ToggleButton" />
+            <Slider fx:id="volumeSlider" />
+            <Slider fx:id="songSlider" />
          </children></HBox>
    </bottom>
 </BorderPane>
