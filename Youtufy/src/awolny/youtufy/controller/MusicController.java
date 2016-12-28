@@ -1,17 +1,39 @@
 package awolny.youtufy.controller;
 
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.web.WebView;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TableView;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.input.MouseEvent;
 
 public class MusicController implements Initializable {
 
@@ -19,7 +41,7 @@ public class MusicController implements Initializable {
     private Button nextButton;
 
     @FXML
-    private Button playtButton;
+    private Button playButton;
 
     @FXML
     private Slider volumeSlider;
@@ -32,12 +54,12 @@ public class MusicController implements Initializable {
 		this.nextButton = nextButton;
 	}
 
-	public Button getPlaytButton() {
-		return playtButton;
+	public Button getPlayButton() {
+		return playButton;
 	}
 
-	public void setPlaytButton(Button playtButton) {
-		this.playtButton = playtButton;
+	public void setPlayButton(Button playButton) {
+		this.playButton = playButton;
 	}
 
 	public Slider getVolumeSlider() {
@@ -60,7 +82,7 @@ public class MusicController implements Initializable {
 		return resultTableView;
 	}
 
-	public void setResultTableView(TableView<?> resultTableView) {
+	public void setResultTableView(TableView<String> resultTableView) {
 		this.resultTableView = resultTableView;
 	}
 
@@ -84,7 +106,7 @@ public class MusicController implements Initializable {
 		return historyListView;
 	}
 
-	public void setHistoryListView(ListView<?> historyListView) {
+	public void setHistoryListView(ListView<String> historyListView) {
 		this.historyListView = historyListView;
 	}
 
@@ -100,7 +122,7 @@ public class MusicController implements Initializable {
     private Slider songSlider;
 
     @FXML
-    private TableView<?> resultTableView;
+    private TableView<String> resultTableView;
 
     @FXML
     private WebView videoWebView;
@@ -109,7 +131,7 @@ public class MusicController implements Initializable {
     private TextField searchTextField;
 
     @FXML
-    private ListView<?> historyListView;
+    private ListView<String> historyListView;
 
     @FXML
     private Button prevButton;
@@ -117,6 +139,46 @@ public class MusicController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		configureButtons();
+		configureSearch();
+	}
+	 private void configureButtons() {
+	        // dodanie akcji przycisku dla playButton
+	        playButton.setOnAction(new EventHandler<ActionEvent>() {
+	            @Override
+	            public void handle(ActionEvent event) {
 
+	                if (playButton.isFocused()) {
+	                    System.out.println("Play");
+	                } else {
+	                    System.out.println("Stop");
+	                }
+	            }
+	        });
+
+	        // dodanie akcji dla previous i next
+	        prevButton.setOnAction(x -> System.out.println("Previous"));
+
+	        nextButton.setOnAction(x -> System.out.println("Next"));
+	    }
+	 private void configureSearch() {
+	     // dodajemy zdarzenie do pola tekstowego
+	     // klasa anonimowa, poniewa¿ jest nieco rozbudowane
+		 searchTextField.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+
+	            @Override
+	            public void handle(KeyEvent event) {
+
+	                String searchQuery = searchTextField.getText();
+	                ObservableList<String> historyList = historyListView.getItems();
+
+	                if (event.getCode().equals(KeyCode.ENTER)) {
+
+	                    if (historyList.isEmpty() || !historyList.get(0).equals(searchQuery)) {
+	                        historyList.add(0, searchQuery);
+	                    }
+	                }
+	            }
+	    });
 	}
 }

@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="361.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="361.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="awolny.youtufy.controller.MusicController">
    <left>
       <VBox BorderPane.alignment="CENTER">
          <children>
-            <TextField />
-            <ListView prefHeight="200.0" prefWidth="200.0" />
+            <TextField fx:id="searchTextField" />
+            <ListView fx:id="historyListView" prefHeight="200.0" prefWidth="200.0" />
          </children></VBox>
    </left>
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <WebView prefHeight="200.0" prefWidth="200.0" />
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <WebView fx:id="videoWebView" prefHeight="200.0" prefWidth="200.0" />
+            <TableView fx:id="resultTableView" prefHeight="200.0" prefWidth="200.0">
               <columns>
                 <TableColumn prefWidth="75.0" text="C1" />
                 <TableColumn prefWidth="75.0" text="C2" />
@@ -29,11 +29,11 @@
    <bottom>
       <HBox BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
-            <Slider />
-            <Slider />
+            <Button fx:id="prevButton" mnemonicParsing="false" text="Button" />
+            <Button fx:id="playButton" mnemonicParsing="false" text="Button" />
+            <Button fx:id="nextButton" mnemonicParsing="false" text="Button" />
+            <Slider fx:id="volumeSlider" />
+            <Slider fx:id="songSlider" />
          </children></HBox>
    </bottom>
    <top>
