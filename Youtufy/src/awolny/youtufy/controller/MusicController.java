@@ -148,7 +148,7 @@ public class MusicController implements Initializable {
 	            @Override
 	            public void handle(ActionEvent event) {
 
-	                if (playButton.isFocused()) {
+	                if (playButton.isSelected()) {
 	                    System.out.println("Play");
 	                } else {
 	                    System.out.println("Stop");
