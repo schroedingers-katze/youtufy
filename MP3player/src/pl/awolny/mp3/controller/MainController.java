@@ -15,9 +15,21 @@ public class MainController implements Initializable {
     @FXML
     private URL location;
 
+    @FXML
+    private ContentPaneController contentPaneController;
+
+    @FXML
+    private ControlPaneController controlPaneController;
+
+    @FXML
+    private MenuPaneController menuPaneController;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
+		System.out.println(contentPaneController);
+		System.out.println(controlPaneController);
+		System.out.println(menuPaneController);
 
 	}
 }
