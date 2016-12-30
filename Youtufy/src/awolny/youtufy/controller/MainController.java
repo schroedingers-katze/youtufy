@@ -1,3 +1,5 @@
+package awolny.youtufy.controller;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
