@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="contentPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pl.awolny.mp3.controller.ContentPaneController">
+  <children>
+    <TableView fx:id="contentTable" layoutX="1.0" prefHeight="238.0" prefWidth="252.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="C1" />
+        <TableColumn prefWidth="75.0" text="C2" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>

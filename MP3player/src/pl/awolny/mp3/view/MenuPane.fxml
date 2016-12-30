@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pl.awolny.mp3.controller.MenuPaneController">
+  <children>
+    <MenuBar maxHeight="1.7976931348623157E308">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="File" fx:id="fileMenuItem" />
+            <MenuItem mnemonicParsing="false" text="Close" fx:id="closeMenuItem" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" fx:id="aboutMenuItem" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</HBox>
