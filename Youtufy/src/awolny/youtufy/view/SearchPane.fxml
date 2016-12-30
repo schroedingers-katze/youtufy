@@ -9,7 +9,7 @@
 
 <VBox maxHeight="1.7976931348623157E308" prefHeight="278.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
-    <TextField fx:id="searchTextField" />
+    <TextField fx:id="searchTextField" maxHeight="1.7976931348623157E308" prefHeight="29.0" prefWidth="200.0" />
     <ListView fx:id="historyListView" maxHeight="1.7976931348623157E308" prefHeight="256.0" prefWidth="200.0" />
   </children>
 </VBox>
