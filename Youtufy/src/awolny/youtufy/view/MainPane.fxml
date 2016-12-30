@@ -7,13 +7,13 @@
 <VBox prefHeight="320.0" prefWidth="458.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="MainController">
   <!-- TODO Add Nodes -->
   <children>
-    <fx:include source="MenuPane.fxml" />
+    <fx:include fx:id="menuPane" source="MenuPane.fxml" />
     <HBox prefHeight="270.0" prefWidth="472.0">
       <children>
-        <fx:include source="SearchPane.fxml" />
-        <fx:include source="ContentPane.fxml" prefHeight="270.0" prefWidth="272.0" />
+        <fx:include fx:id="searchPane" source="SearchPane.fxml" />
+        <fx:include fx:id="contentPane" source="ContentPane.fxml" prefHeight="270.0" prefWidth="272.0" />
       </children>
     </HBox>
-    <fx:include source="ControlPane.fxml" prefHeight="26.0" prefWidth="458.0" />
+    <fx:include fx:id="controlPane" source="ControlPane.fxml" prefHeight="26.0" prefWidth="458.0" />
   </children>
 </VBox>
