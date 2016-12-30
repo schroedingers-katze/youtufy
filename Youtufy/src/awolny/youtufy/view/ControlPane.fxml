@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.*?>
+
+<HBox maxHeight="1.7976931348623157E308" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button fx:id="prevButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+    <Button fx:id="playButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+    <Button fx:id="nextButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+    <Slider fx:id="volumeSlider" />
+    <Slider fx:id="songSlider" />
+  </children>
+</HBox>
