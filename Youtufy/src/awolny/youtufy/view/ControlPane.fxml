@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.web.*?>
 
-<HBox maxHeight="1.7976931348623157E308" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<HBox maxHeight="1.7976931348623157E308" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="awolny.youtufy.controller.ControlPaneController">
   <children>
     <Button fx:id="prevButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
     <Button fx:id="playButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
